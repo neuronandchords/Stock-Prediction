@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Stock Prediction</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+</head>
+<body style="background: #000;">
+ <div class="login">
+	<h1>Stocks Forecasting Accenture</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}"method="post">
+    	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict sales for next 100 days</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text}}
+ </div>
+</body>
+</html>
